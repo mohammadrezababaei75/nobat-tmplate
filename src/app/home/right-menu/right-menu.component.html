@@ -1,0 +1,46 @@
+<div class="container">
+
+    <div class="select-input" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">
+        <span>{{ city.name }}</span>
+        <i class="fa-solid fa-angle-down float-start"></i>
+    </div>
+    <div class="offcanvas offcanvas-bottom bg-light" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <input class="form-control border" (keyup)="SelectInput(true,$event)" type="text" placeholder="نام شهر را وارد کنید." aria-label="default input example">
+            <button type="button" class="d-none" id="closeCityOffCanvas" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body small text-center py-0" data-mdb-perfect-scrollbar>
+            <ng-container *ngFor="let city of cities">
+                <div *ngIf="searched(1,city.name)" (click)="selectItem(true,city.slug)" class="select-item">{{ city.name }}</div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="select-input" data-bs-toggle="offcanvas" data-bs-target="#areaOffcanvasBottom">
+        <span>{{ area.name }}</span>
+        <i class="fa-solid fa-angle-down float-start"></i>
+    </div>
+    <div class="offcanvas offcanvas-bottom bg-light" tabindex="-1" id="areaOffcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <input class="form-control border" (keyup)="SelectInput(false,$event)" type="text" placeholder="نام محله را وارد کنید." aria-label="default input example">
+            <button type="button" class="d-none" id="closeAreaOffCanvas" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body small text-center py-0" data-mdb-perfect-scrollbar>
+            <ng-container *ngFor="let area of areas">
+                <div *ngIf="searched(0,area.name)" (click)="selectItem(false,area.slug)"  class="select-item">{{ area.name }}</div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div>
+        <a *ngFor="let sp of Specialties" href="{{sp.link}}" class="Specialty-item">
+            <i class="fa-solid fa-angle-left text-secondary"></i>
+            <span>{{sp.name}}</span>
+        </a>
+    </div>
+
+    <div class="d-grid gap-2 m-2 rounded-3">
+        <a class="btn btn-primary">عضویت مطب جدید</a>
+      </div>
+    <hr class="border border-dark bg-dark"> 
+</div>

@@ -1,0 +1,30 @@
+:host{
+    background: #2cbfd8;
+    display: block;
+    border-bottom:2px solid #22a9bc;
+    padding: 1.5rem 0 1rem 0;
+}
+header.container{
+    padding: 20px 20px 20px 0;
+    background: #2cbfd8;
+}
+
+.headerLink{
+    background: #00a0b7;
+    color: #4be8ff;
+    border: 1px solid #4be8ff;
+    box-shadow: 0 3px 6px #f1f1f157;
+    padding: 5px 10px;
+    margin: 0 0.25rem;
+}
+.searchForm input{
+    border:0;
+    border-radius: 0.5rem;
+    font-size: small;
+}
+.searchForm button{
+    background-color: white;
+    border: 0;
+    color: #00a0b7;
+    border-radius: 0.5rem;
+}

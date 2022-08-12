@@ -1,0 +1,31 @@
+<h3 class="h6 text-secondary my-2">{{title}} {{ city.name }}</h3>
+
+<div class="row doctor-list">
+    <!-- <ng-container *ngFor="let doctor of doctors">
+        <a class="col-md-6 doctor-card" role="button">
+            <app-doctor class="doctor-card" [doctor]="doctor"></app-doctor>
+        </a>
+    </ng-container> -->
+    <a *ngFor="let doctor of doctors" class="col-md-6 doctor-card" role="button">
+        <div class="card">
+            <span class="city-badge">{{doctor.city}}</span>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8 doctor-list-info">
+                        <div class="card-title mb-3 text-dark fw-bold h5">{{doctor.name}}</div>
+                        <div *ngFor="let sp of doctor.Specialty" class="cu-bg-light takhasos-badge">{{sp.name}}</div>
+                        <div class="text-dark my-2 cut-text" *ngIf="doctor.Specialty.length<2">{{doctor.address}}</div>
+                        <div class="nobatdehi">
+                            <span class="cu-bg-light text">نوبت دهی</span>
+                            <span class="cu-bg-light type" [ngClass]="doctor.nobatType=='اینترنتی'?'nobatdehi-interneti':'nobatdehi-telephoni'">{{doctor.nobatType}}</span>
+                        </div>
+                    </div>
+                    <div class="col-4 pt-3 text-center">
+                        <img class="w-100 rounded" src="{{doctor.imgUrl}}">
+                        <app-star-rate [rate]="doctor.star"></app-star-rate>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div> 

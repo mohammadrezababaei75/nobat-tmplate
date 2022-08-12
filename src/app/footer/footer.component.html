@@ -1,0 +1,42 @@
+<footer class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-4">
+                    <app-title size="h5">عنوان</app-title>
+                    <ng-container *ngFor="let link of footerLinks">
+                        <a *ngIf="link.row==1" class="FLink" href="link.link">
+                            <i class="fa-solid fa-angle-left text-secondary px-2"></i>
+                            {{link.text}}
+                        </a>
+                    </ng-container>
+                </div>
+                <div class="col-md-4">
+                    <app-title size="h5">عنوان</app-title>
+                    <ng-container *ngFor="let link of footerLinks">
+                        <a *ngIf="link.row==2" class="FLink" href="link.link">
+                            <i class="fa-solid fa-angle-left text-secondary px-2"></i>
+                            {{link.text}}
+                        </a>
+                    </ng-container>
+                </div>
+                <div class="col-md-4">
+                    <app-title size="h5">عنوان</app-title>
+                    <ng-container *ngFor="let link of footerLinks">
+                        <a *ngIf="link.row==3" class="FLink" href="link.link">
+                            <i class="fa-solid fa-angle-left text-secondary px-2"></i>
+                            {{link.text}}
+                        </a>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 align-self-center">
+            <a href="https://trustseal.enamad.ir/?id=205461&Code=qLJz8VCvTrhuNCWUixxI">
+                <img class="w-100" src="https://dmngo.ir/wp-content/uploads/2022/01/enamad-1-300x231.png">
+            </a>
+        </div>
+    </div>
+</footer>
+    

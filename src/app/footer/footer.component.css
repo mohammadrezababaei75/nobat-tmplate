@@ -1,0 +1,23 @@
+/* :host{
+    position: relative;
+    bottom: 0;
+}
+:host p{
+    text-align: center;
+} */
+:host{
+    background: #f2f2f2!important;
+    float: right;
+    width: 100%;
+    padding: 50px 0 70px 0;
+    border-top: 1px solid #d3d3d3;
+    margin-top: 44px;
+}
+a.FLink{
+    color: rgb(32, 32, 32);
+    display: block;
+    text-decoration: none;
+}
+a.FLink:hover{
+    background-color: aliceblue;
+}

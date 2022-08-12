@@ -1,0 +1,66 @@
+.select-input{
+    margin: 0.5rem 0;
+    padding: 0.25rem 0.5rem;
+    border:1px rgb(180, 180, 180) solid;
+    border-right: 3px  rgb(180, 180, 180) solid;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.select-input input{
+    border-radius: 0.5rem;
+}
+
+.Specialty-item{
+    padding: 0.25rem;
+    margin: 0.25rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.Specialty-item:hover{
+    box-shadow: 3px 0 0 #CCC;
+}
+.Specialty-item span{
+    color:black
+}
+.Specialty-item i{
+    margin-left: 0.5rem;
+}
+.offcanvas{
+    height:  45vh;
+}
+.offcanvas .offcanvas-body::-webkit-scrollbar{
+    width: 10px;
+}
+
+/* Track */
+.offcanvas .offcanvas-body::-webkit-scrollbar-track {
+    background: #f1f1f100;
+  }
+  
+  /* Handle */
+  .offcanvas .offcanvas-body::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.352);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  .offcanvas .offcanvas-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.723);
+  }
+
+  .select-item{
+    /* mb-0 py-2 border-bottom */
+    margin-bottom: 0px;
+    padding: 0.5rem 0 ;
+    border-bottom: 1px solid #e6e5e5;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+  }

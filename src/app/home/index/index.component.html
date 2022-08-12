@@ -1,0 +1,11 @@
+<div class="row mx-md-5">
+    <div class="col-md-1"></div>
+    <div class="col-md-3 py-2">
+        <app-right-menu (onSelectCity)="setCity($event)"></app-right-menu>
+    </div>
+    <div class="col-md-7 py-2">
+        <app-doctor-list title="لیست آدرس و تلفن بهترین پزشکان" [city]="city"></app-doctor-list>
+    </div>
+    <div class="col-md-1"></div>
+    <app-pagination [perPage]="10" [ItemCount]="20"></app-pagination>
+</div>

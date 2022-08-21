@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { city } from 'src/app/Model';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-index',
@@ -8,7 +9,9 @@ import { city } from 'src/app/Model';
 })
 export class IndexComponent implements OnInit {
   city:city={name:"",slug:""}
-  constructor() { }
+  constructor(private mService:MainService) { 
+    this.city=mService.cities[0];
+  }
 
   ngOnInit(): void {
   }

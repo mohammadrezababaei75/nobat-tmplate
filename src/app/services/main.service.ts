@@ -194,19 +194,40 @@ export class MainService {
     {name:"تهران",slug:"tehran"},
     {name:"اصفهان",slug:"esfahan"},
     {name:"مشهد",slug:"mashhad"},
-    {name:"فم",slug:"ghom"},
+    {name:"قم",slug:"ghom"},
     {name:"قزوین",slug:"ghazvin"},
     {name:"کرمان",slug:"kerman"},
   ]
   
   areas : area[]=[
-    {name:"عظیمیه",slug:"azimieh",citySlug:"karaj"},
-    {name:"گوهردشت",slug:"gohardasht",citySlug:"karaj"},
-    {name:"جهانشهر",slug:"jahanshahr",citySlug:"karaj"},
+    
     // {name:"عظیمیه",slug:"azimieh",citySlug:"karaj"},
     // {name:"گوهردشت",slug:"gohardasht",citySlug:"karaj"},
     // {name:"جهانشهر",slug:"jahanshahr",citySlug:"karaj"},
   ]
 
-  constructor() { }
+  constructor() {this.onSelectCity(this.cities[0].slug) }
+
+  onSelectCity(city:string ){
+    console.log(city)
+    console.log("on service")
+
+    switch(city){
+      case "karaj":
+        this.areas=[
+          {name:"عظیمیه",slug:"azimieh",citySlug:"karaj"},
+          {name:"گوهردشت",slug:"gohardasht",citySlug:"karaj"},
+          {name:"جهانشهر",slug:"jahanshahr",citySlug:"karaj"},
+        ];
+        console.log(this.areas.length);
+        break;
+      case "tehran":
+          this.areas=[];
+          console.log(this.areas.length);
+          console.log("valiasr");
+        break;
+      default:
+        this.areas=[];
+    }
+  }
 }

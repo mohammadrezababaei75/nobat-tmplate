@@ -1,5 +1,5 @@
 import { Target } from '@angular/compiler';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { area, city, Specialty } from 'src/app/Model';
 import { MainService } from 'src/app/services/main.service';
 
@@ -9,23 +9,27 @@ import { MainService } from 'src/app/services/main.service';
   styleUrls: ['./right-menu.component.css']
 })
 export class RightMenuComponent implements OnInit {
-  
+  @Input() cities:city[]=[];
+  @Input() city:city={name:"",slug:""};
+  @Input() areas:area[]=[];
+  @Input() area:area={name:"",slug:"",citySlug:""};
   @Output() onSelectCity=new EventEmitter;
   citySearchWord:string='';
   areaSearchWord:string='';
   
-  cities:city[];
+  //cities:city[]=[];
   Specialties:Specialty[];
-  areas:area[];
-  city:city;
-  area:area;
+  //areas:area[];
+  //city:city={name:"",slug:""};
+  //area:area;
   
   constructor(private mService :MainService) { 
     this.Specialties=mService.Specialties;
-    this.cities=mService.cities;
-    this.areas=mService.areas;
-    this.city=this.cities[0];
-    this.area=this.areas[0];
+    //@Input() area:area=areas[0];
+    //this.cities=mService.cities;
+    //this.areas=mService.areas;
+    //this.city=this.cities[0];
+    //this.area=this.areas[0];
   }
 
   ngOnInit(): void {
@@ -56,10 +60,13 @@ export class RightMenuComponent implements OnInit {
         {
           this.city=element;
           this.onSelectCity.emit(element)
+          this.areas=this.mService.areas;
+          this.area=this.areas[0];
           document.getElementById('closeCityOffCanvas')?.click();
           return
         }
       });
+      
     }else{
       this.areas.forEach(element => {
         if(element.slug==slug)

@@ -6,7 +6,7 @@
     </div>
     <div class="offcanvas offcanvas-bottom bg-light" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
         <div class="offcanvas-header">
-            <input class="form-control border" (keyup)="SelectInput(true,$event)" type="text" placeholder="نام شهر را وارد کنید." aria-label="default input example">
+            <input class="form-control border" (input)="SelectInput(true,$event)" type="text" placeholder="نام شهر را وارد کنید." aria-label="default input example">
             <button type="button" class="d-none" id="closeCityOffCanvas" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body small text-center py-0" data-mdb-perfect-scrollbar>
@@ -16,13 +16,14 @@
         </div>
     </div>
 
+    <ng-container *ngIf="areas.length">
     <div class="select-input" data-bs-toggle="offcanvas" data-bs-target="#areaOffcanvasBottom">
         <span>{{ area.name }}</span>
         <i class="fa-solid fa-angle-down float-start"></i>
     </div>
     <div class="offcanvas offcanvas-bottom bg-light" tabindex="-1" id="areaOffcanvasBottom" aria-labelledby="offcanvasBottomLabel">
         <div class="offcanvas-header">
-            <input class="form-control border" (keyup)="SelectInput(false,$event)" type="text" placeholder="نام محله را وارد کنید." aria-label="default input example">
+            <input class="form-control border" (input)="SelectInput(false,$event)" type="text" placeholder="نام محله را وارد کنید." aria-label="default input example">
             <button type="button" class="d-none" id="closeAreaOffCanvas" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body small text-center py-0" data-mdb-perfect-scrollbar>
@@ -31,6 +32,7 @@
             </ng-container>
         </div>
     </div>
+    </ng-container>
 
     <div>
         <a *ngFor="let sp of Specialties" href="{{sp.link}}" class="Specialty-item">

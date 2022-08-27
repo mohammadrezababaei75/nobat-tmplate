@@ -1,7 +1,7 @@
 <div class="row mx-md-5">
     <div class="col-md-1"></div>
     <div class="col-md-3 py-2">
-        <app-right-menu (onSelectCity)="setCity($event)"></app-right-menu>
+        <app-right-menu (onSelectCity)="setCity($event)" [cities]="cities" [city]="city" [areas]="areas" [area]="area"></app-right-menu>
     </div>
     <div class="col-md-7 py-2">
         <app-doctor-list title="لیست آدرس و تلفن بهترین پزشکان" [city]="city"></app-doctor-list>

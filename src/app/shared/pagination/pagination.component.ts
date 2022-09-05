@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-pagination',
@@ -8,22 +9,28 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PaginationComponent implements OnInit {
   @Input() perPage:number=0;
   @Input() ItemCount:number=0;
+  @Output() onSelectPage=new EventEmitter;
   Arr = Array;
   currentPage:number=0;
-  constructor() {  }
+  constructor(private mService :MainService) {  }
 
   ngOnInit(): void {
   }
 
   nextPage(){
-    this.currentPage++;
-    console.log(this.currentPage)
+    //this.currentPage++;
+    //this.setPage(this.currentPage+1);
+    //console.log(this.currentPage)
   }
   prePage(){
-    this.currentPage--;
-    console.log(this.currentPage)
+    //this.currentPage--;
+    //this.setPage(this.currentPage-1);
+    //console.log(this.currentPage)
   }
-  setPage(page:number){
-    this.currentPage=page;
+  setPage(pageNumber:number){
+    this.currentPage=pageNumber;
+    this.onSelectPage.emit(pageNumber)
   }
+
+  
 }

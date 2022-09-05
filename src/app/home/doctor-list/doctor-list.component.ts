@@ -11,7 +11,7 @@ export class DoctorListComponent implements OnInit {
   @Input() title:string;
   @Input() type:string;
   @Input() city:city={name:"",slug:""};
-  @Input() doctors:DoctorModel[];
+  @Input() doctors:DoctorModel[]=[];
   //@Input() Specialties : Specialty[];
   //@Input() doctor:DoctorModel;
   
@@ -19,7 +19,7 @@ export class DoctorListComponent implements OnInit {
   constructor(private mService :MainService) {
     this.title="";
     this.type="اینترنتی";
-    this.doctors=mService.doctors;
+    // this.doctors=mService.doctors;
     // this.city=mService.cities[0];
     // this.city={name:"کرج",slug:"صب"};;
     //this.Specialties=mService.Specialties;

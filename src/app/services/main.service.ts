@@ -6,8 +6,11 @@ import { area, city, DoctorModel, Specialty } from '../Model';
 })
 export class MainService {
   doctors : DoctorModel[]=[
+    
+  ];
+  tmpdoctors : DoctorModel[]=[
     {
-      name:"دکتر راد",
+      name:"1 دکتر راد",
       Specialty:[{name:"دندانپزشکی",link:"https://mdra.ir"}],
       city:"کرج",
       address:"کرج ، جهانشهر ، خیابان 13 ، پلاک 3",
@@ -16,7 +19,7 @@ export class MainService {
       star:5
     },
     {
-      name:"دکتر الهه",
+      name:"2 دکتر الهه",
       Specialty:[
         {name:"دندانپزشکی",link:"https://mdra.ir"},
         {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
@@ -27,7 +30,7 @@ export class MainService {
       star:3
     },
     {
-      name:"دکتر قشمی",
+      name:"3 دکتر قشمی",
       Specialty:[],
       city:"کاشان",
       address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
@@ -36,7 +39,7 @@ export class MainService {
       star:4
     },
     {
-      name:"دکتر راد",
+      name:"4 دکتر راد",
       Specialty:[{name:"دندانپزشکی",link:"https://mdra.ir"}],
       city:"کرج",
       address:"کرج ، جهانشهر ، خیابان 13 ، پلاک 3",
@@ -45,7 +48,7 @@ export class MainService {
       star:5
     },
     {
-      name:"دکتر الهه",
+      name:"5 دکتر الهه",
       Specialty:[
         {name:"دندانپزشکی",link:"https://mdra.ir"},
         {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
@@ -56,7 +59,7 @@ export class MainService {
       star:3
     },
     {
-      name:"دکتر قشمی",
+      name:"6 دکتر قشمی",
       Specialty:[],
       city:"کاشان",
       address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
@@ -65,7 +68,7 @@ export class MainService {
       star:4
     },
     {
-      name:"دکتر راد",
+      name:"7 دکتر راد",
       Specialty:[{name:"دندانپزشکی",link:"https://mdra.ir"}],
       city:"کرج",
       address:"کرج ، جهانشهر ، خیابان 13 ، پلاک 3",
@@ -74,7 +77,7 @@ export class MainService {
       star:5
     },
     {
-      name:"دکتر الهه",
+      name:"8 دکتر الهه",
       Specialty:[
         {name:"دندانپزشکی",link:"https://mdra.ir"},
         {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
@@ -85,7 +88,7 @@ export class MainService {
       star:3
     },
     {
-      name:"دکتر قشمی",
+      name:"9 دکتر قشمی",
       Specialty:[],
       city:"کاشان",
       address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
@@ -94,7 +97,7 @@ export class MainService {
       star:4
     },
     {
-      name:"دکتر قشمی",
+      name:"10 دکتر قشمی",
       Specialty:[],
       city:"کاشان",
       address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
@@ -103,7 +106,7 @@ export class MainService {
       star:4
     },
     {
-      name:"دکتر الهه",
+      name:"11 دکتر الهه",
       Specialty:[
         {name:"دندانپزشکی",link:"https://mdra.ir"},
         {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
@@ -114,7 +117,7 @@ export class MainService {
       star:3
     },
     {
-      name:"دکتر قشمی",
+      name:"12 دکتر قشمی",
       Specialty:[],
       city:"کاشان",
       address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
@@ -123,7 +126,7 @@ export class MainService {
       star:4
     },
     {
-      name:"دکتر قشمی",
+      name:"13 دکتر قشمی",
       Specialty:[],
       city:"کاشان",
       address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
@@ -132,7 +135,7 @@ export class MainService {
       star:4
     },
     {
-      name:"دکتر الهه",
+      name:"14 دکتر الهه",
       Specialty:[
         {name:"دندانپزشکی",link:"https://mdra.ir"},
         {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
@@ -143,7 +146,7 @@ export class MainService {
       star:3
     },
     {
-      name:"دکتر قشمی",
+      name:"15 دکتر قشمی",
       Specialty:[],
       city:"کاشان",
       address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
@@ -152,7 +155,315 @@ export class MainService {
       star:4
     },
     {
-      name:"دکتر قشمی",
+      name:"16 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"1 دکتر راد",
+      Specialty:[{name:"دندانپزشکی",link:"https://mdra.ir"}],
+      city:"کرج",
+      address:"کرج ، جهانشهر ، خیابان 13 ، پلاک 3",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/119883",
+      star:5
+    },
+    {
+      name:"2 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"3 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"4 دکتر راد",
+      Specialty:[{name:"دندانپزشکی",link:"https://mdra.ir"}],
+      city:"کرج",
+      address:"کرج ، جهانشهر ، خیابان 13 ، پلاک 3",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/119883",
+      star:5
+    },
+    {
+      name:"5 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"6 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"7 دکتر راد",
+      Specialty:[{name:"دندانپزشکی",link:"https://mdra.ir"}],
+      city:"کرج",
+      address:"کرج ، جهانشهر ، خیابان 13 ، پلاک 3",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/119883",
+      star:5
+    },
+    {
+      name:"8 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"9 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"10 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"11 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"12 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"13 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"14 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"15 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"16 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"1 دکتر راد",
+      Specialty:[{name:"دندانپزشکی",link:"https://mdra.ir"}],
+      city:"کرج",
+      address:"کرج ، جهانشهر ، خیابان 13 ، پلاک 3",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/119883",
+      star:5
+    },
+    {
+      name:"2 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"3 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"4 دکتر راد",
+      Specialty:[{name:"دندانپزشکی",link:"https://mdra.ir"}],
+      city:"کرج",
+      address:"کرج ، جهانشهر ، خیابان 13 ، پلاک 3",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/119883",
+      star:5
+    },
+    {
+      name:"5 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"6 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"7 دکتر راد",
+      Specialty:[{name:"دندانپزشکی",link:"https://mdra.ir"}],
+      city:"کرج",
+      address:"کرج ، جهانشهر ، خیابان 13 ، پلاک 3",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/119883",
+      star:5
+    },
+    {
+      name:"8 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"9 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"10 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"11 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"12 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"13 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"اینترنتی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"14 دکتر الهه",
+      Specialty:[
+        {name:"دندانپزشکی",link:"https://mdra.ir"},
+        {name:"گوش و حلق و بینی",link:"https://mdra.ir/gosh"}],
+      city:"تهران",
+      address:"تهران ، ولیعصر",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/227798",
+      star:3
+    },
+    {
+      name:"15 دکتر قشمی",
+      Specialty:[],
+      city:"کاشان",
+      address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
+      nobatType:"تلفنی",
+      imgUrl:"https://mystatic.ir/v1/doctor/profile_photo/218090",
+      star:4
+    },
+    {
+      name:"16 دکتر قشمی",
       Specialty:[],
       city:"کاشان",
       address:"کاشان ، فلکه دوم ، خیابان انصار ، ساختمان آفتاب",
@@ -229,5 +540,14 @@ export class MainService {
       default:
         this.areas=[];
     }
+  }
+
+  Page(pageNumber:number){
+    pageNumber++;
+    var perpage=10;
+    //var prepageNumber=pageNumber-1;
+    this.doctors=this.tmpdoctors.slice(pageNumber*perpage-perpage,pageNumber*perpage)
+    console.log(pageNumber*perpage-perpage,pageNumber*perpage);
+
   }
 }

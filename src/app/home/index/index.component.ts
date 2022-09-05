@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { area, city } from 'src/app/Model';
+import { Component, OnInit , Input } from '@angular/core';
+import { area, city, DoctorModel } from 'src/app/Model';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -12,11 +12,14 @@ export class IndexComponent implements OnInit {
   cities:city[]=[]
   areas:area[]=[]
   area:area//={name:"",slug:"",citySlug:""}
+  @Input() doctors:DoctorModel[];
   constructor(private mService:MainService) { 
     this.cities=mService.cities;
     this.city=this.cities[0];
     this.areas=mService.areas;
     this.area=this.areas[0];
+    this.doctors=mService.doctors;
+    this.setPage(0);
   }
   
   ngOnInit(): void {
@@ -28,5 +31,9 @@ export class IndexComponent implements OnInit {
     this.mService.onSelectCity(city.slug);
     //this.cities=this.mService.cities;
     //this.city=this.cities[0];
+  }
+  setPage(pageNumber:number){
+    this.mService.Page(pageNumber);
+    this.doctors=this.mService.doctors;
   }
 }

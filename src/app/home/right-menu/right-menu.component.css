@@ -64,3 +64,8 @@
     font-size: 1rem;
     cursor: pointer;
   }
+
+  .active{
+    font-weight: bolder;
+    box-shadow: 3px 0 0 #4be8ff;
+  }

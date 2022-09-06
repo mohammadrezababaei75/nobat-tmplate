@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { area, city, DoctorModel, Specialty } from '../Model';
+import { area, city, DoctorModel, Specialty, SubSpecialty } from '../Model';
 
 @Injectable({
   providedIn: 'root'
@@ -474,8 +474,8 @@ export class MainService {
   ];
 
   Specialties : Specialty[]=[
-    {name:"تغذیه",link:"https://site.com/spe/taghzie"},
-    {name:"عمومی",link:"https://site.com/spe/omomi"},
+    {name:"تغذیه",link:"taghzie"},
+    {name:"عمومی",link:"omomi"},
     {name:"عفونی",link:"https://site.com/spe/ofoni"},
     {name:"قلب و عروق",link:"https://site.com/spe/ghalb"},
     {name:"فیزیوتراپی",link:"https://site.com/spe/fiziotrapy"},
@@ -517,6 +517,15 @@ export class MainService {
     // {name:"جهانشهر",slug:"jahanshahr",citySlug:"karaj"},
   ]
 
+  subspecialties:SubSpecialty[]=[];
+
+//Filter Variables
+  fName:string="";
+  fCity:city["slug"]= "";
+  fArea:area["slug"]= "";
+  fSpecialty:Specialty["link"]='';
+  fSubSpecialty:SubSpecialty["link"]="";
+
   constructor() {this.onSelectCity(this.cities[0].slug) }
 
   onSelectCity(city:string ){
@@ -539,6 +548,25 @@ export class MainService {
         break;
       default:
         this.areas=[];
+    }
+  }
+
+  onSelectSpecialty(specialty:Specialty["link"] ){
+    switch(specialty){
+      case "taghzie":
+        this.subspecialties=[
+          {name:"چاقی",link:"chaghi",specialtyLink:"taghzie"},
+          {name:"لاغری",link:"laghari",specialtyLink:"taghzie"}
+        ];
+      break;
+      case "omomi":
+        this.subspecialties=[
+          {name:"کودکان",link:"kodakan",specialtyLink:"omomi"},
+          {name:"بزرگسال",link:"bozorgsal",specialtyLink:"omomi"}
+        ];
+      break;
+      default:
+        this.subspecialties=[];
     }
   }
 

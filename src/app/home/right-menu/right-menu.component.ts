@@ -1,6 +1,6 @@
 import { Target } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { area, city, Specialty } from 'src/app/Model';
+import { area, city, Specialty, SubSpecialty } from 'src/app/Model';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -13,7 +13,9 @@ export class RightMenuComponent implements OnInit {
   @Input() city:city={name:"",slug:""};
   @Input() areas:area[]=[];
   @Input() area:area={name:"",slug:"",citySlug:""};
+  @Input() subSpecialties:SubSpecialty[]=[];
   @Output() onSelectCity=new EventEmitter;
+  @Output() onSelectSpecialty=new EventEmitter;
   citySearchWord:string='';
   areaSearchWord:string='';
   
@@ -70,6 +72,33 @@ export class RightMenuComponent implements OnInit {
     }else{
       this.areas.forEach(element => {
         if(element.slug==slug)
+        {
+          this.area=element;
+          document.getElementById('closeAreaOffCanvas')?.click();
+          return
+        }
+      });
+    }
+  }
+
+
+  selectSpecialty(isSpecialty:boolean,link:string){
+    if(isSpecialty){
+      this.Specialties.forEach(element => {
+        if(element.link==link)
+        {
+          //this.city=element;
+          this.onSelectSpecialty.emit(element)
+          // this.areas=this.mService.areas;
+          // this.area=this.areas[0];
+          // document.getElementById('closeCityOffCanvas')?.click();
+          return
+        }
+      });
+      
+    }else{
+      this.areas.forEach(element => {
+        if(element.slug==link)
         {
           this.area=element;
           document.getElementById('closeAreaOffCanvas')?.click();

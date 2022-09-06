@@ -1,5 +1,5 @@
 import { Component, OnInit , Input } from '@angular/core';
-import { area, city, DoctorModel } from 'src/app/Model';
+import { area, city, DoctorModel, Specialty, SubSpecialty } from 'src/app/Model';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { MainService } from 'src/app/services/main.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  subSpecialties:SubSpecialty[]=[];
   city:city={name:"",slug:""}
   cities:city[]=[]
   areas:area[]=[]
@@ -19,6 +20,7 @@ export class IndexComponent implements OnInit {
     this.areas=mService.areas;
     this.area=this.areas[0];
     this.doctors=mService.doctors;
+    this.subSpecialties=mService.subspecialties;
     this.setPage(0);
   }
   
@@ -35,5 +37,10 @@ export class IndexComponent implements OnInit {
   setPage(pageNumber:number){
     this.mService.Page(pageNumber);
     this.doctors=this.mService.doctors;
+  }
+  SelectSpecialty(specialty:Specialty){
+    console.log(specialty);
+    this.mService.onSelectSpecialty(specialty.link);
+    this.subSpecialties=this.mService.subspecialties;
   }
 }

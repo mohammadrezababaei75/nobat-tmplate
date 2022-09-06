@@ -13,9 +13,10 @@ export interface Specialty{
     link:string,
 }
 
-export interface Specialty {
+export interface SubSpecialty {
     name:string,
-    link:string
+    link:string,
+    specialtyLink:Specialty["link"]
 }
 
 export interface city {

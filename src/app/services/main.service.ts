@@ -499,6 +499,7 @@ export class MainService {
     {name:"فیزیوتراپی",link:"https://site.com/spe/fiziotrapy"},
     {name:"داخلی",link:"https://site.com/spe/dakheli"},
   ];
+  specialty:Specialty={name:'',link:''}
   
   cities : city[]=[
     {name:"کرج",slug:"karaj"},
@@ -551,7 +552,11 @@ export class MainService {
     }
   }
 
-  onSelectSpecialty(specialty:Specialty["link"] ){
+  s_onSelectSpecialty(specialty:Specialty["link"] ){
+    this.Specialties.forEach(element => {
+      if(element.link==specialty)
+        this.specialty=element;
+    })
     switch(specialty){
       case "taghzie":
         this.subspecialties=[
@@ -568,6 +573,10 @@ export class MainService {
       default:
         this.subspecialties=[];
     }
+    this.fSubSpecialty="";
+  }
+  s_onSelectSubSpecialty(SubSpecialty:SubSpecialty["link"]){
+    this.fSubSpecialty=SubSpecialty;
   }
 
   Page(pageNumber:number){

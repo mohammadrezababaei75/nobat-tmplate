@@ -4,11 +4,14 @@
         <app-right-menu 
             (onSelectCity)="setCity($event)" 
             (onSelectSpecialty)="SelectSpecialty($event)"
+            (onSelectSubSpecialty)="SelectSubSpecialty($event)"
             [cities]="cities" 
             [city]="city" 
             [areas]="areas" 
             [area]="area"
             [subSpecialties]="subSpecialties"
+            [subSpecialtyLink]="subSpecialtyLink"
+            [specialty]="specialty"
         >
         </app-right-menu>
     </div>

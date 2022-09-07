@@ -14,8 +14,11 @@ export class RightMenuComponent implements OnInit {
   @Input() areas:area[]=[];
   @Input() area:area={name:"",slug:"",citySlug:""};
   @Input() subSpecialties:SubSpecialty[]=[];
+  @Input() subSpecialtyLink:SubSpecialty['link']='';
+  @Input() specialty:Specialty={name:'',link:''};
   @Output() onSelectCity=new EventEmitter;
   @Output() onSelectSpecialty=new EventEmitter;
+  @Output() onSelectSubSpecialty=new EventEmitter;
   citySearchWord:string='';
   areaSearchWord:string='';
   
@@ -82,7 +85,7 @@ export class RightMenuComponent implements OnInit {
   }
 
 
-  selectSpecialty(isSpecialty:boolean,link:string){
+  selectSpecialty(link:string,isSpecialty:boolean=true){
     if(isSpecialty){
       this.Specialties.forEach(element => {
         if(element.link==link)
@@ -97,11 +100,10 @@ export class RightMenuComponent implements OnInit {
       });
       
     }else{
-      this.areas.forEach(element => {
-        if(element.slug==link)
+      this.subSpecialties.forEach(element => {
+        if(element.link==link)
         {
-          this.area=element;
-          document.getElementById('closeAreaOffCanvas')?.click();
+          this.onSelectSubSpecialty.emit(element)
           return
         }
       });

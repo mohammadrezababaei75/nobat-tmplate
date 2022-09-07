@@ -36,14 +36,25 @@
 
     <ng-container *ngIf="subSpecialties.length">
         <div>
-            <a *ngFor="let subSpecialty of subSpecialties" href="{{subSpecialty.link}}" class="Specialty-item">
-                <i class="fa-regular fa-square text-secondary"></i>
+            <a 
+            class="Specialty-item"
+            *ngFor="let subSpecialty of subSpecialties" 
+            
+            (click)="selectSpecialty(subSpecialty.link,false)">
+            <i *ngIf="!(subSpecialty.link==subSpecialtyLink)" class="fa-regular fa-square text-secondary"></i>
+            <i *ngIf="subSpecialty.link==subSpecialtyLink" class="fa-solid fa-square-check"></i>
+            <!-- <i  class="fa-solid fa-check"></i> -->
                 <span>{{subSpecialty.name}}</span>
             </a>
         </div>
     </ng-container>
     <div>
-        <a *ngFor="let sp of Specialties" (click)="selectSpecialty(true,sp.link)" [ngClass]="{'active': subSpecialties[0]?.specialtyLink==sp.link }" class="Specialty-item">
+        <a 
+        class="Specialty-item"
+        *ngFor="let sp of Specialties" 
+        [ngClass]="{'active': specialty.link==sp.link }" 
+        (click)="selectSpecialty(sp.link)" 
+        >
             <i class="fa-solid fa-angle-left text-secondary"></i>
             <span>{{sp.name}}</span>
         </a>

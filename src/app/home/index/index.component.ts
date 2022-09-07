@@ -12,7 +12,9 @@ export class IndexComponent implements OnInit {
   city:city={name:"",slug:""}
   cities:city[]=[]
   areas:area[]=[]
+  subSpecialtyLink:SubSpecialty['link']
   area:area//={name:"",slug:"",citySlug:""}
+  specialty:Specialty;
   @Input() doctors:DoctorModel[];
   constructor(private mService:MainService) { 
     this.cities=mService.cities;
@@ -21,6 +23,8 @@ export class IndexComponent implements OnInit {
     this.area=this.areas[0];
     this.doctors=mService.doctors;
     this.subSpecialties=mService.subspecialties;
+    this.subSpecialtyLink=mService.fSubSpecialty;
+    this.specialty=mService.specialty;
     this.setPage(0);
   }
   
@@ -39,8 +43,15 @@ export class IndexComponent implements OnInit {
     this.doctors=this.mService.doctors;
   }
   SelectSpecialty(specialty:Specialty){
-    console.log(specialty);
-    this.mService.onSelectSpecialty(specialty.link);
+    this.mService.s_onSelectSpecialty(specialty.link);
     this.subSpecialties=this.mService.subspecialties;
+    this.subSpecialtyLink=this.mService.fSubSpecialty;
+    this.specialty=this.mService.specialty;  
+    console.log(this.specialty);
+  }
+  SelectSubSpecialty(subSpecialty:SubSpecialty){
+    this.mService.s_onSelectSubSpecialty(subSpecialty.link);
+    this.subSpecialtyLink=this.mService.fSubSpecialty;
+    console.log(this.subSpecialtyLink);
   }
 }
